@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:00:12 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/04 21:35:00 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/04 22:08:56 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,11 @@ typedef	struct	s_apoio
 int				ft_printf(const char *format, ...);
 void			ft_putchar(char c, t_apoio *ap);
 void			ft_check_string(const char *str, t_apoio *ap);
-void			ft_check_flags_1(const char *str, t_apoio *ap);
+void			ft_check_flags_main(const char *str, t_apoio *ap);
+void			ft_check_flags_1(const char *str, t_apoio *ap, t_flags *flags);
 void			ft_check_flags_2(const char *str, t_apoio *ap, t_flags *flags);
 int				ft_isdigit(int c);
 void			ft_restart_flags(t_flags *flags);
-void			ft_check_specifiers(const char *str, t_apoio *ap);
+void			ft_check_strings(const char *str, t_apoio *ap, t_flags *flags);
 
 #endif

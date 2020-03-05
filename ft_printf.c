@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 22:11:33 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/04 21:35:11 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/04 22:09:06 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_check_string(const char *str, t_apoio *ap)
 				ft_putchar(str[ap->i], ap);
 			}
 			else
-				ft_check_flags_1(str, ap);
+				ft_check_flags_main(str, ap);
 		}
 		ap->i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 19:13:06 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/04 21:35:06 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/04 22:08:59 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,22 +46,27 @@ void	ft_check_flags_2(const char *str, t_apoio *ap, t_flags *flags)
 	}
 }
 
-void	ft_check_flags_1(const char *str, t_apoio *ap)
+void	ft_check_flags_1(const char *str, t_apoio *ap, t_flags *flags)
+{
+	while (str[ap->i] == '-')
+	{
+		flags->minus = '-';
+		ap->i++;
+	}
+	while (str[ap->i] == '0')
+	{
+		flags->zero = 48;
+		ap->i++;
+	}
+}
+
+void	ft_check_flags_main(const char *str, t_apoio *ap)
 {
 	t_flags	flags;
 
 	ap->i++;
 	ft_restart_flags(&flags);
-	while (str[ap->i] == '-')
-	{
-		flags.minus = '-';
-		ap->i++;
-	}
-	while (str[ap->i] == '0')
-	{
-		flags.zero = 48;
-		ap->i++;
-	}
+	ft_check_flags_1(str, ap, &flags);
 	ft_check_flags_2(str, ap, &flags);
-	ft_check_specifiers(str, ap);
+	ft_check_strings(str, ap, &flags);
 }

@@ -6,7 +6,7 @@
 #    By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 22:17:26 by gmarsi            #+#    #+#              #
-#    Updated: 2020/03/04 19:15:40 by gmarsi           ###   ########.fr        #
+#    Updated: 2020/03/04 22:02:38 by gmarsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,9 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libftprintf.a
 
-SRC =	ft_printf.c			\
-		ft_check_flags.c	\
+SRC =	ft_printf.c				\
+		ft_check_flags.c		\
+		ft_check_specifiers.c	\
 
 OBJ =	$(subst .c,.o,$(SRC))
 
