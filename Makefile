@@ -6,7 +6,7 @@
 #    By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 22:17:26 by gmarsi            #+#    #+#              #
-#    Updated: 2020/03/04 22:02:38 by gmarsi           ###   ########.fr        #
+#    Updated: 2020/03/05 21:01:33 by gmarsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,12 @@ NAME = libftprintf.a
 
 SRC =	ft_printf.c				\
 		ft_check_flags.c		\
-		ft_check_specifiers.c	\
+		ft_check_char.c			\
+		ft_check_string.c		\
+		ft_support_1.c			\
+		ft_itoa.c				\
+		ft_substr.c				\
+		ft_strlen.c				\
 
 OBJ =	$(subst .c,.o,$(SRC))
 
