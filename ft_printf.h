@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:00:12 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/11 18:29:16 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/11 19:35:39 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,9 @@ void			ft_check_flags_2(const char *str, t_apoio *ap, t_flags *flags);
 void			ft_check_flags_3(const char *str, t_apoio *ap, t_flags *flags);
 void			ft_check_char(const char *str, t_apoio *ap, t_flags *flags);
 void			ft_check_string(const char *str, t_apoio *ap, t_flags *flags);
+void			ft_check_string_a(t_apoio *ap, t_flags *flags, char *swap);
+void			ft_check_string_b(t_apoio *ap, t_flags *flags, char *swap);
+void			ft_check_string_c(t_apoio *ap, t_flags *flags, char *swap);
+void			ft_check_string_d(t_apoio *ap, t_flags *flags, char *swap);
 
 #endif

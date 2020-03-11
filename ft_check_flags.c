@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 19:13:06 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/11 19:00:33 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/11 19:32:12 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	ft_check_flags_1(const char *str, t_apoio *ap, t_flags *flags)
 	}
 }
 
-void		ft_check_flags_main(const char *str, t_apoio *ap)
+void	ft_check_flags_main(const char *str, t_apoio *ap)
 {
 	t_flags	flags;
 
