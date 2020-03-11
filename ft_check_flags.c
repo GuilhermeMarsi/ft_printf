@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 19:13:06 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/05 22:03:29 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/10 22:31:37 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_check_flags_3(const char *str, t_apoio *ap, t_flags *flags)
 {
-	ap->i = str[ap->i] == '.' ? ap->i++ : ap->i;
+	ap->i = str[ap->i] == '.' ? ap->i + 1 : ap->i;
 	if (str[ap->i] == '*')
 	{
 		flags->prec = va_arg(ap->list, int);
@@ -65,7 +65,7 @@ void	ft_check_flags_1(const char *str, t_apoio *ap, t_flags *flags)
 	}
 }
 
-void	ft_check_flags_main(const char *str, t_apoio *ap)
+void		ft_check_flags_main(const char *str, t_apoio *ap)
 {
 	t_flags	flags;
 

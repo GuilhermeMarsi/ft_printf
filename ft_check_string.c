@@ -6,40 +6,68 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 20:48:04 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/05 22:03:38 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/10 22:31:34 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_check_string(const char *str, t_apoio *ap, t_flags *flags)
+void		ft_check_string(const char *str, t_apoio *ap, t_flags *flags)
 {
-	char *s;
+	char *swap;
 
+	ap->j = 0;
 	if (str[ap->i] == 's')
 	{
-		if (flags->prec > ft_strlen(str))
-			flags->prec = ft_strlen(str);
+		swap = va_arg(ap->list, char*);
+		if (flags->prec > ft_strlen(swap))
+			flags->prec = ft_strlen(swap);
 		if (flags->width <= flags->prec)
 			flags->width = 0;
 		else
-			flags->width -= flags->prec;
-		if(!(s = (char*)malloc(sizeof(char) * (flags->width + flags->prec + 1))))
-			return (0);
+			flags->width = flags->width - flags->prec;
+		if (flags->minus == '-' && flags->prec != 0)
+		{
+			while (ap->j < flags->prec)
+				ft_putchar(swap[ap->j++], ap);
+			while (ap->j < flags->prec + flags->width)
+			{
+				ft_putchar(' ', ap);
+				ap->j++;
+			}
+		}
+		else if (flags->minus == '-' && flags->prec == 0)
+		{
+			while (ap->j < flags->width)
+			{
+				ft_putchar(' ', ap);
+				ap->j++;
+			}
+		}
+		else if (flags->minus != '-' && flags->prec != 0)
+		{
+			while (ap->j < flags->width)
+			{
+				ft_putchar(' ', ap);
+				ap->j++;
+			}
+			ap->j = 0;
+			while (ap->j < flags->prec)
+				ft_putchar(swap[ap->j++], ap);
+		}
+		else if (flags->minus != '-' && flags->prec == 0)
+		{
+			while (ap->j < flags->width)
+			{
+				ft_putchar(' ', ap);
+				ap->j++;
+			}
+		}
+		else
+			while (swap[ap->j])
+				ft_putchar(swap[ap->j++], ap);
 	}
-
-
-
-
-//	ap->j = 0;
-//	if (str[ap->i] == 's')
-//	{
-//		s = va_arg(ap->list, char*);
-//		while (s[ap->j])
-//		{
-//			ft_putchar(s[ap->j], ap);
-//			ap->j++;
-//		}
-//	}
-	return (1);
+	//INICIAR VARIÁVEIS EM -1;
+	//MUDAR AS CONDIÇÕES DO CHECK_FLAGS;
+	//MUDAR AS CONDIÇÕES DO CHECK_STRINGS DE ACORDO
 }

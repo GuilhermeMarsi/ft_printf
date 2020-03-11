@@ -6,13 +6,13 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 22:11:33 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/05 22:03:27 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/10 20:27:20 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_check_main_string(const char *str, t_apoio *ap)
+int		ft_check_main_string(const char *str, t_apoio *ap)
 {
 	ap->i = 0;
 	while (str[ap->i])
@@ -31,6 +31,7 @@ void	ft_check_main_string(const char *str, t_apoio *ap)
 		}
 		ap->i++;
 	}
+	return (1);
 }
 
 void	ft_putchar(char c, t_apoio *ap)
