@@ -6,13 +6,13 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 19:21:52 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/05 19:53:54 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/11 18:29:00 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen(const char *str)
+long	ft_strlen(const char *str)
 {
 	int i;
 

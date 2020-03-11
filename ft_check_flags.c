@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 19:13:06 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:37 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/11 19:00:33 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 
 void	ft_check_flags_3(const char *str, t_apoio *ap, t_flags *flags)
 {
-	ap->i = str[ap->i] == '.' ? ap->i + 1 : ap->i;
+	if (str[ap->i] == '.')
+	{
+		flags->prec = 0;
+		ap->i++;
+	}
 	if (str[ap->i] == '*')
 	{
 		flags->prec = va_arg(ap->list, int);
 		ap->i++;
 	}
-	else
+	else if (ft_isdigit(str[ap->i]))
 	{
+		flags->prec = 0;
 		while (ft_isdigit(str[ap->i]))
 		{
-			flags->prec = flags->prec + (str[ap->i] - 48);
+			flags->prec += (str[ap->i] - 48);
 			if (ft_isdigit(str[ap->i + 1]))
 				flags->prec *= 10;
 			ap->i++;
@@ -39,11 +44,12 @@ void	ft_check_flags_2(const char *str, t_apoio *ap, t_flags *flags)
 		flags->width = va_arg(ap->list, int);
 		ap->i++;
 	}
-	else
+	else if (ft_isdigit(str[ap->i]))
 	{
+		flags->width = 0;
 		while (ft_isdigit(str[ap->i]))
 		{
-			flags->width = flags->width + (str[ap->i] - 48);
+			flags->width += (str[ap->i] - 48);
 			if (ft_isdigit(str[ap->i + 1]))
 				flags->width *= 10;
 			ap->i++;

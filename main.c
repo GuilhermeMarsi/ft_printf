@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:59:43 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:43 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/11 19:09:01 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int main(void)
 	char *s1 = "TESTE";
 	char *s2 = "TESTE";
 
-	num1 = printf("Teste de String sem mai%4s argumento%7.5s.\n", s1,  s1);
-	num2 = ft_printf("Teste de String sem mai%4s argumento%7.5s.\n", s2,  s2);
+	num1 = printf("Teste de String sem mai%s argumento%-5.10s.\n", s1,  s1);
+	num2 = ft_printf("Teste de String sem mai%s argumento%-5.10s.\n", s2,  s2);
+//	num2 = ft_printf("%s", s2);
 	printf("\n");
 	printf(">> Retorno da original: %d\n>> Retorno da minha: %d\n", num1, num2);
 	return (0);

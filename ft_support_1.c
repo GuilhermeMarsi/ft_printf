@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 19:18:10 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/10 22:30:28 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/11 18:22:05 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_restart_flags(t_flags *flags)
 {
 	flags->minus = '\0';
 	flags->zero = '\0';
-	flags->width = 0;
-	flags->prec = 0;
+	flags->width = -1;
+	flags->prec = -1;
 }

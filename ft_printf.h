@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:00:12 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:40 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/11 18:29:16 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ typedef	struct	s_flags
 {
 	char		minus;
 	char		zero;
-	size_t		width;
-	size_t		prec;
+	long		width;
+	long		prec;
 }				t_flags;
 
 typedef	struct	s_apoio
 {
 	va_list		list;
 	int			i;
-	size_t		j;
+	long		j;
 	int			ret;
 }				t_apoio;
 
@@ -50,7 +50,7 @@ int				ft_printf(const char *format, ...);
 int				ft_isdigit(int c);
 char			*ft_itoa(int n);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
-size_t			ft_strlen(const char *str);
+long			ft_strlen(const char *str);
 void			ft_putchar(char c, t_apoio *ap);
 int				ft_check_main_string(const char *str, t_apoio *ap);
 void			ft_check_flags_main(const char *str, t_apoio *ap);
