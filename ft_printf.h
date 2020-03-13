@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:00:12 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/11 19:35:39 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/12 21:45:28 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,15 @@ typedef	struct	s_flags
 
 typedef	struct	s_apoio
 {
-	va_list		list;
-	int			i;
-	long		j;
-	int			ret;
+	va_list			list;
+	int				i;
+	long			j;
+	int				ret;
+	unsigned int	n;
+	unsigned int 	num;
+	unsigned int	num_ap;
+	unsigned int	resto;
+	unsigned int	div;
 }				t_apoio;
 
 /*
@@ -64,5 +69,7 @@ void			ft_check_string_a(t_apoio *ap, t_flags *flags, char *swap);
 void			ft_check_string_b(t_apoio *ap, t_flags *flags, char *swap);
 void			ft_check_string_c(t_apoio *ap, t_flags *flags, char *swap);
 void			ft_check_string_d(t_apoio *ap, t_flags *flags, char *swap);
+void			ft_check_lower_hexa(const char *str, t_apoio *ap, t_flags *flags);
+void			ft_calculate_hexa(t_apoio *ap);
 
 #endif

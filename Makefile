@@ -6,7 +6,7 @@
 #    By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 22:17:26 by gmarsi            #+#    #+#              #
-#    Updated: 2020/03/05 22:13:19 by gmarsi           ###   ########.fr        #
+#    Updated: 2020/03/12 21:09:01 by gmarsi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC =	ft_printf.c				\
 		ft_itoa.c				\
 		ft_substr.c				\
 		ft_strlen.c				\
+		ft_check_lower_hexa.c	\
 
 OBJ =	$(subst .c,.o,$(SRC))
 

@@ -6,7 +6,7 @@
 /*   By: gmarsi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 19:13:06 by gmarsi            #+#    #+#             */
-/*   Updated: 2020/03/11 19:32:12 by gmarsi           ###   ########.fr       */
+/*   Updated: 2020/03/12 21:45:36 by gmarsi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,5 @@ void	ft_check_flags_main(const char *str, t_apoio *ap)
 	ft_check_flags_3(str, ap, &flags);
 	ft_check_char(str, ap, &flags);
 	ft_check_string(str, ap, &flags);
+	ft_check_lower_hexa(str, ap, &flags);
 }
